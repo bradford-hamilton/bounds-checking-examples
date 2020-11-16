@@ -10,14 +10,14 @@ func foo(b []byte) {
 	b[1] = 1 // Found IsInBounds
 	b[2] = 2 // Found IsInBounds
 	b[3] = 3 // Found IsInBounds
-	b[4] = 4 // Found IsInBounds
 }
 
 func bar(b []byte) {
-	_ = b[4] // Found IsInBounds
+	_ = b[5] // Found IsInBounds
 	b[0] = 0
 	b[1] = 1
 	b[2] = 2
 	b[3] = 3
 	b[4] = 4
+	b[5] = 5
 }
